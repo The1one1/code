@@ -1,0 +1,1 @@
+{"name":"Local: Max-Chunks-To-Make-Array-Sorted","url":"/home/rahul/Documents/code/Max-Chunks-To-Make-Array-Sorted.cpp","tests":[{"id":1657685466458,"input":"6\n2 0 1 3 5 4","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/rahul/Documents/code/Max-Chunks-To-Make-Array-Sorted.cpp","group":"local","local":true}

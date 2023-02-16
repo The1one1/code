@@ -1,0 +1,1 @@
+{"name":"Local: choose-one letter","url":"/home/rahul/Documents/code/choose-one letter.cpp","tests":[{"id":1664725049545,"input":"4\n3 1 5 8","output":"I am using hackerrank to learn c\nam using to learn"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/rahul/Documents/code/choose-one letter.cpp","group":"local","local":true}

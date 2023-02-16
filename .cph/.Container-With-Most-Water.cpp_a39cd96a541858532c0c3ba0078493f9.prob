@@ -1,0 +1,1 @@
+{"name":"Local: Container-With-Most-Water","url":"/home/rahul/Documents/code/Container-With-Most-Water.cpp","tests":[{"id":1655903440645,"input":"9\n-6 -2 -1 0 1 4 5 7 9","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/rahul/Documents/code/Container-With-Most-Water.cpp","group":"local","local":true}

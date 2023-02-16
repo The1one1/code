@@ -1,0 +1,1 @@
+{"name":"Local: Max-Product-Of-Three-Numbers","url":"/home/rahul/Documents/code/Max-Product-Of-Three-Numbers.cpp","tests":[{"id":1657779741964,"input":"14\n8 7 -9 -3 11 -17 -12 -11 10 7 29 16 8 9","output":"5916"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/rahul/Documents/code/Max-Product-Of-Three-Numbers.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: Majority-Element-General","url":"/home/rahul/Documents/code/Majority-Element-General.cpp","tests":[{"id":1656160833946,"input":"8 4\n3 1 2 2 1 2 3 3","output":"[2, 3]"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/rahul/Documents/code/Majority-Element-General.cpp","group":"local","local":true}
