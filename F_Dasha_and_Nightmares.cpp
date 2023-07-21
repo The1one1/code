@@ -3,32 +3,58 @@ using namespace std;
 #define int unsigned long long
 
 signed main(){
-    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
     int n; cin >> n;
-    vector<bitset<25>> odd;
-    vector<int> even;
+    vector<pair<int, int>> v;
     for(int i = 0; i < n; i++) {
         bitset<25> b;
+        set<char> s;
         string str; cin >> str;
         for(auto &it: str) {
             int ind = it - 'a';
             b[ind] = b[ind] ^ 1;
+            s.insert(it);
         }
-
-        (b.count() % 2 == 0) ? even.push_back(b.to_ullong()) : odd.push_back(b);
+        v.push_back({s.size(), b.to_ullong()});
     }
+    sort(v.begin(), v.end());
 
-    int cnt = 0;
-    sort(even.begin(), even.end());
-    for_each(even.begin(), even.end(), [&](auto it){ cout << it << " ";}); cout << endl;
-    for(int i = 0; i < odd.size(); i++) {
-        bitset<25> b = ((1 << 26) - 1);
-        b =  odd[i] ^ b;
-        int ind1 = lower_bound(even.begin(), even.end(), b.to_ullong()) - even.begin();
-        int ind2 = upper_bound(even.begin(), even.end(), b.to_ullong()) - even.begin();
-        if(ind1 != even.size() and even[ind1] == b.to_ullong()) {
-            cnt += (ind2 - ind1);
+    int ans = 0;
+    vector<int> newArr(n);
+    for(int i = 0; i < n; i++) {
+        cout << v[i].first << "  " << v[i].second << endl;
+        newArr[i] = v[i].first;
+    }
+    for(int i = 0; i < n; i++) {
+        int ind = lower_bound(newArr.begin() + i + 1, newArr.end(), (25 - v[i].first)) - newArr.begin();
+        while(ind < n and v[ind].first == (25 - v[i].first)) {
+            bitset<25> bits = (v[i].second ^ v[ind].second);
+            if(bits.count() == 25) {
+                ans++;
+            }
+            ind++;
         }
     }
-    cout << cnt << endl;
+    cout << ans << endl;
 }
+
+
+
+/*
+int bitmask = (1 << 26) - 1;
+    map<int, int> mp;
+    for(auto &it: v) {
+        mp[it.to_ullong()]++;
+    }
+    for(auto it: mp) {
+        cout << it.first << " " << it.second << endl;
+    }
+    cout << endl;
+    int ans = 0;
+
+    for(auto &it: v) {
+        int x = it.to_ullong();
+        for(int i = 0; i < 26; i++) {
+            ans += mp[bitmask - x - (1 << i)];
+        }
+    }
+*/
